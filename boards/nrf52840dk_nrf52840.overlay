@@ -1,0 +1,53 @@
+/*
+ * Copyright (c) 2020 Nordic Semiconductor ASA
+ *
+ * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+ */
+
+/ {
+	chosen {
+		zephyr,entropy = &rng;
+	};
+
+	msd_do {
+		compatible = "gpio-keys";
+		do_rs485rede: do_rs485_rede {
+			gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
+			label = "RS_485_REDE";
+		};
+		do0: do_0 {
+			gpios = <&gpio0 14 GPIO_ACTIVE_LOW>;
+			label = "Green DO 0";
+		};
+	};
+
+	msdz_adc_t_label: see_msdz_yaml{
+		compatible =  "msd_zigbee_temperature_sensor";
+		msdz-adc-t-id = <&adc>;
+		msdz-adc-t-channels = <2>;
+		msdz-adc-t-sequence = <0>;
+	};
+
+	aliases {
+	uart-rs485 = &uart1;
+	do-rs485rede = &do_rs485rede;
+	do-0 = &do0;
+	msdz-adcs-t	= &msdz_adc_t_label;
+	};
+};
+
+
+&uart1 {
+	current-speed = <19200>;
+	tx-pin = <3>;
+	rx-pin = <28>;
+	rts-pin = <30>;
+	cts-pin = <29>;
+};
+
+&zephyr_udc0 {
+	cdc_acm_uart0 {
+		compatible = "zephyr,cdc-acm-uart";
+		label = "CDC_ACM_0";
+	};
+};

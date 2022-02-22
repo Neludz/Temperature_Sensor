@@ -1,0 +1,29 @@
+/*
+ * Copyright (c) 2020 Nordic Semiconductor ASA
+ *
+ * SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+ */
+
+/ {
+	chosen {
+		zephyr,entropy = &rng;
+	};
+
+	msdz_adc_t_label: see_msdz_yaml{
+		compatible =  "msd_zigbee_temperature_sensor";
+		msdz-adc-t-id = <&adc>;
+		msdz-adc-t-channels = <2>;
+		msdz-adc-t-sequence = <0>;
+	};
+
+	aliases {
+	msdz-adcs-t	= &msdz_adc_t_label;
+	};
+};
+
+&zephyr_udc0 {
+	cdc_acm_uart0 {
+		compatible = "zephyr,cdc-acm-uart";
+		label = "CDC_ACM_0";
+	};
+};

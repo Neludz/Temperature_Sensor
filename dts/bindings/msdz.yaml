@@ -1,0 +1,16 @@
+description: MSDZ node
+include: [base.yaml]
+
+compatible: "msd_zigbee_temperature_sensor"
+
+#child-binding:
+properties:
+    msdz-adc-t-id:
+        type: phandle
+        required: false
+    msdz-adc-t-channels:
+        type: array
+        required: false
+    msdz-adc-t-sequence:
+        type: array
+        required: false

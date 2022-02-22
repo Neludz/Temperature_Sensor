@@ -1,0 +1,3 @@
+osource "d:/gg_project/MS_Workspace_10kV//boards/shields/*/Kconfig.defconfig"
+osource "d:/gg_project/MS_Workspace_10kV/Temperature_Sensor/boards/shields/*/Kconfig.defconfig"
+osource "D:/Nordic/NRF_CONNECT_SDK/v1.9.0/nrf/boards/shields/*/Kconfig.defconfig"
