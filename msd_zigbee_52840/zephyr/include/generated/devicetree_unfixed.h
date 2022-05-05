@@ -5,7 +5,7 @@
  *   D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/zephyr.dts.pre
  *
  * Directories with bindings:
- *   D:/Nordic/NRF_CONNECT_SDK/v1.9.0/nrf/dts/bindings, D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/dts/bindings, $ZEPHYR_BASE\dts\bindings
+ *   D:/Nordic/NRF_CONNECT_SDK/v1.9.1/nrf/dts/bindings, D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/dts/bindings, $ZEPHYR_BASE\dts\bindings
  *
  * Node dependency ordering (ordinal and path):
  *   0   /

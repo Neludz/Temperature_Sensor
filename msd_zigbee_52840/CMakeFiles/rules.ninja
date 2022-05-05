@@ -25,7 +25,7 @@ rule CUSTOM_COMMAND
 rule C_COMPILER__app_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -33,7 +33,7 @@ rule C_COMPILER__app_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__app_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -44,7 +44,7 @@ rule C_STATIC_LIBRARY_LINKER__app_
 rule ASM_COMPILER__zephyr_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -54,7 +54,7 @@ rule ASM_COMPILER__zephyr_
 rule C_COMPILER__zephyr_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -62,7 +62,7 @@ rule C_COMPILER__zephyr_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__zephyr_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -73,7 +73,7 @@ rule C_STATIC_LIBRARY_LINKER__zephyr_
 rule C_COMPILER__offsets_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -83,7 +83,7 @@ rule C_COMPILER__offsets_
 rule C_COMPILER__zephyr_pre1_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -91,7 +91,7 @@ rule C_COMPILER__zephyr_pre1_
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__zephyr_pre1_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $FLAGS $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE  && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $FLAGS $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE  && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   rspfile = $RSP_FILE
   rspfile_content = $in $LINK_PATH $LINK_LIBRARIES
@@ -104,7 +104,7 @@ rule C_EXECUTABLE_LINKER__zephyr_pre1_
 rule C_COMPILER__zephyr_pre0_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -112,7 +112,7 @@ rule C_COMPILER__zephyr_pre0_
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__zephyr_pre0_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $FLAGS $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE  && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $FLAGS $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE  && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   rspfile = $RSP_FILE
   rspfile_content = $in $LINK_PATH $LINK_LIBRARIES
@@ -125,7 +125,7 @@ rule C_EXECUTABLE_LINKER__zephyr_pre0_
 rule C_COMPILER__zephyr_final_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -133,7 +133,7 @@ rule C_COMPILER__zephyr_final_
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__zephyr_final_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $FLAGS $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE  && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $FLAGS $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE  && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
   rspfile = $RSP_FILE
   rspfile_content = $in $LINK_PATH $LINK_LIBRARIES
@@ -146,7 +146,7 @@ rule C_EXECUTABLE_LINKER__zephyr_final_
 rule C_COMPILER__arch__common_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -154,7 +154,7 @@ rule C_COMPILER__arch__common_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__arch__common_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -165,7 +165,7 @@ rule C_STATIC_LIBRARY_LINKER__arch__common_
 rule C_COMPILER__isr_tables_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -173,7 +173,7 @@ rule C_COMPILER__isr_tables_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__isr_tables_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -184,7 +184,7 @@ rule C_STATIC_LIBRARY_LINKER__isr_tables_
 rule ASM_COMPILER__arch__arm__core__aarch32_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -194,7 +194,7 @@ rule ASM_COMPILER__arch__arm__core__aarch32_
 rule C_COMPILER__arch__arm__core__aarch32_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -202,7 +202,7 @@ rule C_COMPILER__arch__arm__core__aarch32_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__arch__arm__core__aarch32_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -213,7 +213,7 @@ rule C_STATIC_LIBRARY_LINKER__arch__arm__core__aarch32_
 rule ASM_COMPILER__arch__arm__core__aarch32__cortex_m_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building ASM object $out
 
 
@@ -223,7 +223,7 @@ rule ASM_COMPILER__arch__arm__core__aarch32__cortex_m_
 rule C_COMPILER__arch__arm__core__aarch32__cortex_m_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -231,7 +231,7 @@ rule C_COMPILER__arch__arm__core__aarch32__cortex_m_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__arch__arm__core__aarch32__cortex_m_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -242,7 +242,7 @@ rule C_STATIC_LIBRARY_LINKER__arch__arm__core__aarch32__cortex_m_
 rule C_COMPILER__arch__arm__core__aarch32__mpu_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -250,7 +250,7 @@ rule C_COMPILER__arch__arm__core__aarch32__mpu_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__arch__arm__core__aarch32__mpu_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -261,7 +261,7 @@ rule C_STATIC_LIBRARY_LINKER__arch__arm__core__aarch32__mpu_
 rule C_COMPILER__lib__libc__newlib_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -269,7 +269,7 @@ rule C_COMPILER__lib__libc__newlib_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__lib__libc__newlib_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -280,7 +280,7 @@ rule C_STATIC_LIBRARY_LINKER__lib__libc__newlib_
 rule C_COMPILER__lib__posix_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -288,7 +288,7 @@ rule C_COMPILER__lib__posix_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__lib__posix_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -299,7 +299,7 @@ rule C_STATIC_LIBRARY_LINKER__lib__posix_
 rule C_COMPILER__soc__arm__common__cortex_m_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -307,7 +307,7 @@ rule C_COMPILER__soc__arm__common__cortex_m_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__soc__arm__common__cortex_m_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -318,7 +318,7 @@ rule C_STATIC_LIBRARY_LINKER__soc__arm__common__cortex_m_
 rule C_COMPILER__soc__arm__nordic_nrf__nrf52_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -326,7 +326,7 @@ rule C_COMPILER__soc__arm__nordic_nrf__nrf52_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__soc__arm__nordic_nrf__nrf52_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -337,7 +337,7 @@ rule C_STATIC_LIBRARY_LINKER__soc__arm__nordic_nrf__nrf52_
 rule C_COMPILER__subsys__net_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -345,7 +345,7 @@ rule C_COMPILER__subsys__net_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__subsys__net_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -356,7 +356,7 @@ rule C_STATIC_LIBRARY_LINKER__subsys__net_
 rule C_COMPILER__subsys__net__pkt_filter_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -364,7 +364,7 @@ rule C_COMPILER__subsys__net__pkt_filter_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__subsys__net__pkt_filter_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -375,7 +375,7 @@ rule C_STATIC_LIBRARY_LINKER__subsys__net__pkt_filter_
 rule C_COMPILER__subsys__net__ip_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -383,7 +383,7 @@ rule C_COMPILER__subsys__net__ip_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__subsys__net__ip_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -394,7 +394,7 @@ rule C_STATIC_LIBRARY_LINKER__subsys__net__ip_
 rule C_COMPILER__subsys__random_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -402,7 +402,7 @@ rule C_COMPILER__subsys__random_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__subsys__random_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -413,7 +413,7 @@ rule C_STATIC_LIBRARY_LINKER__subsys__random_
 rule C_COMPILER__drivers__interrupt_controller_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -421,7 +421,7 @@ rule C_COMPILER__drivers__interrupt_controller_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__interrupt_controller_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -432,7 +432,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__interrupt_controller_
 rule C_COMPILER__drivers__disk_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -440,7 +440,7 @@ rule C_COMPILER__drivers__disk_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__disk_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -451,7 +451,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__disk_
 rule C_COMPILER__drivers__usb__device_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -459,7 +459,7 @@ rule C_COMPILER__drivers__usb__device_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__usb__device_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -470,7 +470,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__usb__device_
 rule C_COMPILER__drivers__adc_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -478,7 +478,7 @@ rule C_COMPILER__drivers__adc_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__adc_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -489,7 +489,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__adc_
 rule C_COMPILER__drivers__clock_control_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -497,7 +497,7 @@ rule C_COMPILER__drivers__clock_control_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__clock_control_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -508,7 +508,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__clock_control_
 rule C_COMPILER__drivers__counter_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -516,7 +516,7 @@ rule C_COMPILER__drivers__counter_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__counter_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -527,7 +527,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__counter_
 rule C_COMPILER__drivers__console_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -535,7 +535,7 @@ rule C_COMPILER__drivers__console_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__console_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -546,7 +546,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__console_
 rule C_COMPILER__drivers__crypto_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -554,7 +554,7 @@ rule C_COMPILER__drivers__crypto_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__crypto_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -565,7 +565,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__crypto_
 rule C_COMPILER__drivers__gpio_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -573,7 +573,7 @@ rule C_COMPILER__drivers__gpio_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__gpio_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -584,7 +584,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__gpio_
 rule C_COMPILER__drivers__ieee802154_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -592,7 +592,7 @@ rule C_COMPILER__drivers__ieee802154_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__ieee802154_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -603,7 +603,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__ieee802154_
 rule C_COMPILER__drivers__hwinfo_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -611,7 +611,7 @@ rule C_COMPILER__drivers__hwinfo_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__hwinfo_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -622,7 +622,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__hwinfo_
 rule C_COMPILER__drivers__flash_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -630,7 +630,7 @@ rule C_COMPILER__drivers__flash_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__flash_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -641,7 +641,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__flash_
 rule C_COMPILER__drivers__serial_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -649,7 +649,7 @@ rule C_COMPILER__drivers__serial_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__serial_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -660,7 +660,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__serial_
 rule C_COMPILER__drivers__entropy_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -668,7 +668,7 @@ rule C_COMPILER__drivers__entropy_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__entropy_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -679,7 +679,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__entropy_
 rule C_COMPILER__drivers__timer_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -687,7 +687,7 @@ rule C_COMPILER__drivers__timer_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__drivers__timer_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -698,7 +698,7 @@ rule C_STATIC_LIBRARY_LINKER__drivers__timer_
 rule C_COMPILER__.2e.2e__nrf__lib__dk_buttons_and_leds_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -706,7 +706,7 @@ rule C_COMPILER__.2e.2e__nrf__lib__dk_buttons_and_leds_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__lib__dk_buttons_and_leds_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -717,7 +717,7 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__lib__dk_buttons_and_leds_
 rule C_COMPILER__.2e.2e__nrf__lib__multithreading_lock_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -725,7 +725,7 @@ rule C_COMPILER__.2e.2e__nrf__lib__multithreading_lock_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__lib__multithreading_lock_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -736,7 +736,7 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__lib__multithreading_lock_
 rule C_COMPILER__.2e.2e__nrf__lib__ram_pwrdn_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -744,7 +744,7 @@ rule C_COMPILER__.2e.2e__nrf__lib__ram_pwrdn_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__lib__ram_pwrdn_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -755,7 +755,7 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__lib__ram_pwrdn_
 rule C_COMPILER__.2e.2e__nrf__lib__fatal_error_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -763,7 +763,7 @@ rule C_COMPILER__.2e.2e__nrf__lib__fatal_error_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__lib__fatal_error_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -774,7 +774,7 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__lib__fatal_error_
 rule C_COMPILER__.2e.2e__nrf__subsys__mpsl__init_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -782,7 +782,7 @@ rule C_COMPILER__.2e.2e__nrf__subsys__mpsl__init_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__subsys__mpsl__init_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -793,7 +793,7 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__subsys__mpsl__init_
 rule C_COMPILER__.2e.2e__nrf__subsys__zigbee_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -801,7 +801,7 @@ rule C_COMPILER__.2e.2e__nrf__subsys__zigbee_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__subsys__zigbee_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -812,7 +812,7 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__subsys__zigbee_
 rule C_COMPILER__.2e.2e__nrf__subsys__zigbee__lib__zigbee_app_utils_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -820,7 +820,7 @@ rule C_COMPILER__.2e.2e__nrf__subsys__zigbee__lib__zigbee_app_utils_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__subsys__zigbee__lib__zigbee_app_utils_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -831,7 +831,7 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__subsys__zigbee__lib__zigbee_app_utils
 rule C_COMPILER__.2e.2e__nrf__subsys__ieee802154_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -839,7 +839,7 @@ rule C_COMPILER__.2e.2e__nrf__subsys__ieee802154_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__subsys__ieee802154_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -850,7 +850,7 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__subsys__ieee802154_
 rule C_COMPILER__.2e.2e__nrf__drivers__mpsl__clock_control_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -858,7 +858,7 @@ rule C_COMPILER__.2e.2e__nrf__drivers__mpsl__clock_control_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__drivers__mpsl__clock_control_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -869,7 +869,7 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__drivers__mpsl__clock_control_
 rule C_COMPILER__.2e.2e__nrf__drivers__mpsl__flash_sync_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -877,7 +877,7 @@ rule C_COMPILER__.2e.2e__nrf__drivers__mpsl__flash_sync_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__drivers__mpsl__flash_sync_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -888,7 +888,7 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__drivers__mpsl__flash_sync_
 rule C_COMPILER__.2e.2e__nrf__drivers__mpsl__temp_nrf5_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -896,7 +896,7 @@ rule C_COMPILER__.2e.2e__nrf__drivers__mpsl__temp_nrf5_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__drivers__mpsl__temp_nrf5_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -907,7 +907,7 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__drivers__mpsl__temp_nrf5_
 rule C_COMPILER__.2e.2e__nrf__drivers__hw_cc310_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -915,7 +915,7 @@ rule C_COMPILER__.2e.2e__nrf__drivers__hw_cc310_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__drivers__hw_cc310_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -926,7 +926,7 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrf__drivers__hw_cc310_
 rule C_COMPILER__nrf-802154-platform_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -934,7 +934,7 @@ rule C_COMPILER__nrf-802154-platform_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__nrf-802154-platform_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -945,7 +945,7 @@ rule C_STATIC_LIBRARY_LINKER__nrf-802154-platform_
 rule C_COMPILER__modules__hal_nordic__nrfx_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -953,7 +953,7 @@ rule C_COMPILER__modules__hal_nordic__nrfx_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__modules__hal_nordic__nrfx_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -964,7 +964,7 @@ rule C_STATIC_LIBRARY_LINKER__modules__hal_nordic__nrfx_
 rule C_COMPILER__.2e.2e__nrfxlib__zboss__production_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -972,7 +972,7 @@ rule C_COMPILER__.2e.2e__nrfxlib__zboss__production_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrfxlib__zboss__production_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -983,7 +983,7 @@ rule C_STATIC_LIBRARY_LINKER__.2e.2e__nrfxlib__zboss__production_
 rule C_COMPILER__zboss-sources_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -991,7 +991,7 @@ rule C_COMPILER__zboss-sources_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__zboss-sources_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS @$RSP_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS @$RSP_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   rspfile = $RSP_FILE
   rspfile_content = $in $LINK_PATH $LINK_LIBRARIES
@@ -1004,7 +1004,7 @@ rule C_STATIC_LIBRARY_LINKER__zboss-sources_
 rule C_COMPILER__nrf-802154-driver_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1012,7 +1012,7 @@ rule C_COMPILER__nrf-802154-driver_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__nrf-802154-driver_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1023,7 +1023,7 @@ rule C_STATIC_LIBRARY_LINKER__nrf-802154-driver_
 rule C_COMPILER__nrf-802154-serialization_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1031,7 +1031,7 @@ rule C_COMPILER__nrf-802154-serialization_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__nrf-802154-serialization_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1042,7 +1042,7 @@ rule C_STATIC_LIBRARY_LINKER__nrf-802154-serialization_
 rule C_COMPILER__kernel_
   depfile = $DEP_FILE
   deps = gcc
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
   description = Building C object $out
 
 
@@ -1050,7 +1050,7 @@ rule C_COMPILER__kernel_
 # Rule for linking C static library.
 
 rule C_STATIC_LIBRARY_LINKER__kernel_
-  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  command = cmd.exe /C "$PRE_LINK && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -E rm -f $TARGET_FILE && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS $in && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
   description = Linking C static library $TARGET_FILE
   restat = $RESTAT
 
@@ -1059,7 +1059,7 @@ rule C_STATIC_LIBRARY_LINKER__kernel_
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe --regenerate-during-build -SD:\gg_project\MS_Workspace_10kV\Temperature_Sensor -BD:\gg_project\MS_Workspace_10kV\Temperature_Sensor\msd_zigbee_52840
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe --regenerate-during-build -SD:\gg_project\MS_Workspace_10kV\Temperature_Sensor -BD:\gg_project\MS_Workspace_10kV\Temperature_Sensor\msd_zigbee_52840
   description = Re-running CMake...
   generator = 1
 
@@ -1068,7 +1068,7 @@ rule RERUN_CMAKE
 # Rule for cleaning additional files.
 
 rule CLEAN_ADDITIONAL
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\cmake.exe -DCONFIG=$CONFIG -P CMakeFiles\clean_additional.cmake
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\cmake.exe -DCONFIG=$CONFIG -P CMakeFiles\clean_additional.cmake
   description = Cleaning additional files...
 
 
@@ -1076,7 +1076,7 @@ rule CLEAN_ADDITIONAL
 # Rule for cleaning all built files.
 
 rule CLEAN
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\ninja.exe $FILE_ARG -t clean $TARGETS
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\ninja.exe $FILE_ARG -t clean $TARGETS
   description = Cleaning all built files...
 
 
@@ -1084,6 +1084,6 @@ rule CLEAN
 # Rule for printing all primary targets available.
 
 rule HELP
-  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.0\toolchain\opt\bin\ninja.exe -t targets
+  command = D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\ninja.exe -t targets
   description = All primary targets available:
 

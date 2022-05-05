@@ -6,6 +6,6 @@
 # and/or the west manifest file.
 #
 # See the Modules guide for more information.
-"BOARD_ROOT":"D:/Nordic/NRF_CONNECT_SDK/v1.9.0/nrf"
-"DTS_ROOT":"D:/Nordic/NRF_CONNECT_SDK/v1.9.0/nrf"
-"MODULE_EXT_ROOT":"D:/Nordic/NRF_CONNECT_SDK/v1.9.0/nrf"
+"BOARD_ROOT":"D:/Nordic/NRF_CONNECT_SDK/v1.9.1/nrf"
+"DTS_ROOT":"D:/Nordic/NRF_CONNECT_SDK/v1.9.1/nrf"
+"MODULE_EXT_ROOT":"D:/Nordic/NRF_CONNECT_SDK/v1.9.1/nrf"

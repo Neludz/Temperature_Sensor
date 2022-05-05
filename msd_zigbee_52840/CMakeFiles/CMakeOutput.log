@@ -1,7 +1,7 @@
 The target system is: Generic - 2.7.99 - arm
 The host system is: Windows - 10.0.22000 - AMD64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
-Compiler: D:/Nordic/NRF_CONNECT_SDK/v1.9.0/toolchain/opt/bin/arm-none-eabi-gcc.exe 
+Compiler: D:/Nordic/NRF_CONNECT_SDK/v1.9.1/toolchain/opt/bin/arm-none-eabi-gcc.exe 
 Build flags: 
 Id flags: -c 
 
@@ -14,7 +14,7 @@ Compilation of the C compiler identification source "CMakeCCompilerId.c" produce
 The C compiler identification is GNU, found in "D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/CMakeFiles/3.20.5/CompilerIdC/CMakeCCompilerId.o"
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: D:/Nordic/NRF_CONNECT_SDK/v1.9.0/toolchain/opt/bin/arm-none-eabi-gcc.exe 
+Compiler: D:/Nordic/NRF_CONNECT_SDK/v1.9.1/toolchain/opt/bin/arm-none-eabi-gcc.exe 
 Build flags: 
 Id flags: -c 
 
