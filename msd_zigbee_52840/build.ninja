@@ -9299,7 +9299,7 @@ build zephyr/cmake/usage/CMakeFiles/usage: CUSTOM_COMMAND
 # Custom command for zephyr\cmake\usage\CMakeFiles\boards
 
 build zephyr/cmake/usage/CMakeFiles/boards: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D D:\gg_project\MS_Workspace_10kV\Temperature_Sensor\msd_zigbee_52840\zephyr\cmake\usage && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\python.exe D:/Nordic/NRF_CONNECT_SDK/v1.9.1/zephyr/scripts/list_boards.py --arch-root=D:/Nordic/NRF_CONNECT_SDK/v1.9.1/zephyr --board-root=d:/gg_project/MS_Workspace_10kV/ --board-root=d:/gg_project/MS_Workspace_10kV/Temperature_Sensor --board-root=d:/gg_project/MS_Workspace_10kV/Temperature_Router --board-root=D:/Nordic/NRF_CONNECT_SDK/v1.9.1/nrf --board-root=D:/Nordic/NRF_CONNECT_SDK/v1.9.1/zephyr"
+  COMMAND = cmd.exe /C "cd /D D:\gg_project\MS_Workspace_10kV\Temperature_Sensor\msd_zigbee_52840\zephyr\cmake\usage && D:\Nordic\NRF_CONNECT_SDK\v1.9.1\toolchain\opt\bin\python.exe D:/Nordic/NRF_CONNECT_SDK/v1.9.1/zephyr/scripts/list_boards.py --arch-root=D:/Nordic/NRF_CONNECT_SDK/v1.9.1/zephyr --board-root=d:/gg_project/MS_Workspace_10kV/ --board-root=d:/gg_project/MS_Workspace_10kV/Temperature_Sensor --board-root=d:/gg_project/MS_Workspace_10kV/Temperature_Router --board-root=d:/gg_project/MS_Workspace_10kV/shell_test --board-root=d:/gg_project/MS_Workspace_10kV/light_bulb --board-root=D:/Nordic/NRF_CONNECT_SDK/v1.9.1/nrf --board-root=D:/Nordic/NRF_CONNECT_SDK/v1.9.1/zephyr"
   pool = console
 
 # =============================================================================

@@ -1,4 +1,6 @@
 osource "d:/gg_project/MS_Workspace_10kV//boards/shields/*/Kconfig.shield"
 osource "d:/gg_project/MS_Workspace_10kV/Temperature_Sensor/boards/shields/*/Kconfig.shield"
 osource "d:/gg_project/MS_Workspace_10kV/Temperature_Router/boards/shields/*/Kconfig.shield"
+osource "d:/gg_project/MS_Workspace_10kV/shell_test/boards/shields/*/Kconfig.shield"
+osource "d:/gg_project/MS_Workspace_10kV/light_bulb/boards/shields/*/Kconfig.shield"
 osource "D:/Nordic/NRF_CONNECT_SDK/v1.9.1/nrf/boards/shields/*/Kconfig.shield"

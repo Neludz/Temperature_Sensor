@@ -1,6 +1,6 @@
 # Generated file that can be used to preload variant images
 set(BOARD msd_zigbee_52840 CACHE INTERNAL "NCS child image controlled")
-set(BOARD_ROOT d:/gg_project/MS_Workspace_10kV/;d:/gg_project/MS_Workspace_10kV/Temperature_Sensor;d:/gg_project/MS_Workspace_10kV/Temperature_Router;D:/Nordic/NRF_CONNECT_SDK/v1.9.1/nrf;D:/Nordic/NRF_CONNECT_SDK/v1.9.1/zephyr CACHE INTERNAL "NCS child image controlled")
+set(BOARD_ROOT d:/gg_project/MS_Workspace_10kV/;d:/gg_project/MS_Workspace_10kV/Temperature_Sensor;d:/gg_project/MS_Workspace_10kV/Temperature_Router;d:/gg_project/MS_Workspace_10kV/shell_test;d:/gg_project/MS_Workspace_10kV/light_bulb;D:/Nordic/NRF_CONNECT_SDK/v1.9.1/nrf;D:/Nordic/NRF_CONNECT_SDK/v1.9.1/zephyr CACHE INTERNAL "NCS child image controlled")
 set(CACHED_CONF_FILE d:/gg_project/MS_Workspace_10kV/Temperature_Sensor/prj.conf CACHE INTERNAL "NCS child image controlled")
 set(CONFIG_DEBUG_OPTIMIZATIONS y CACHE INTERNAL "NCS child image controlled")
 set(CONFIG_DEBUG_THREAD_INFO y CACHE INTERNAL "NCS child image controlled")
