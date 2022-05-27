@@ -1,4 +1,4 @@
-# Install script for directory: D:/Nordic/NRF_CONNECT_SDK/v1.9.1/nrf/lib/dk_buttons_and_leds
+# Install script for directory: D:/Nordic/NRF_CONNECT_SDK/v1.9.1/zephyr/drivers/watchdog
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

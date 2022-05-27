@@ -44,11 +44,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/modules/nrf/lib/dk_buttons_and_leds/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
   include("D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/modules/nrf/lib/multithreading_lock/cmake_install.cmake")
 endif()
 

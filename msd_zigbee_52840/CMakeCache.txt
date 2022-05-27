@@ -27,7 +27,7 @@ BOARD:UNINITIALIZED=msd_zigbee_52840
 BOARD_DIR:PATH=D:/gg_project/MS_Workspace_10kV/boards/arm/msd_zigbee_52840
 
 //No help, variable specified on the command line.
-BOARD_ROOT:STRING=d:/gg_project/MS_Workspace_10kV/;d:/gg_project/MS_Workspace_10kV/Temperature_Sensor;d:/gg_project/MS_Workspace_10kV/Temperature_Router;d:/gg_project/MS_Workspace_10kV/shell_test;d:/gg_project/MS_Workspace_10kV/light_bulb
+BOARD_ROOT:STRING=d:/gg_project/MS_Workspace_10kV/;d:/gg_project/MS_Workspace_10kV/Temperature_Sensor;d:/gg_project/MS_Workspace_10kV/Temperature_Router;d:/gg_project/MS_Workspace_10kV/shell_test;d:/gg_project/MS_Workspace_10kV/light_bulb;d:/gg_project/MS_Workspace_10kV/network_coordinator;d:/gg_project/MS_Workspace_10kV/Temperature_coordinator;d:/gg_project/MS_Workspace_10kV/watchdog
 
 //Path to a program.
 BOSSAC:FILEPATH=BOSSAC-NOTFOUND
@@ -498,7 +498,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=155
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=154
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

@@ -14,7 +14,7 @@
 /**
  * Light routing and application traffic from/to that device.
  */
-#define ZB_CONFIG_LIGHT_TRAFFIC
+#define ZB_CONFIG_HIGH_TRAFFIC
 
 /**
  * Simple user's application at that device: not too many relations

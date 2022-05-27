@@ -1,15 +1,21 @@
 #ifndef MODBUS_X_H_INCLUDED
 #define MODBUS_X_H_INCLUDED
-//======================Include========================================
 
 #include "modbus_reg.h"
 #include "main.h"
-//======================Define========================================
+#include <zboss_api.h>
+
+//-----------------------------------------------------------------------
+// define
+//-----------------------------------------------------------------------
 #define LIMIT_REG	//check limit
 #define EEPROM_REG	//use eeprom
 
-//=========================   Modbus registers X macros   =========================
+#define REG_END_REGISTER    Reg_End
 
+//-----------------------------------------------------------------------
+// Modbus registers X macros
+//-----------------------------------------------------------------------
 /*
 #define READ_R			(0)
 #define WRITE_R			(0x01)	// 0 bit
@@ -25,13 +31,17 @@
 	X_BUF(0,	Reg_Start,						0,		0, 		0,		READ_R)\
 	X_BUF(1,	Reg_T_0_Channel,				0,		0, 		0,	 	READ_R)\
     X_BUF(20,	Reg_Zigbee_Connect_Status,      0,  	0, 	    0,      READ_R)\
-    X_BUF(30,	Reg_Send_Command,		        0,	    0, 	    0,      WRITE_R)\
+    X_BUF(29,	Reg_Send_Command,		        0,	    0, 	    0,      WRITE_R)\
     X_BUF(40,	Reg_Zigbee_Set_Mode,            ZI_SET_MODE_BIT_DEFAULT,\
                                                         0,  	0,      WRITE_R | EESAVE_R)\
     X_BUF(41,	Reg_Zigbee_Set_Channel,		    ZI_SET_CHANNEL_DEFAULT,\
                                                         11,	    26,     WRITE_R | EESAVE_R | LIM_UNSIGN)\
     X_BUF(42,	Reg_Zigbee_Wait_Time_S,         ZI_SET_WAIT_TIME_S_DEFAULT,\
                                                         0,	    0,      WRITE_R | EESAVE_R)\
+    X_BUF(47,	Reg_Zigbee_Timeout,             ED_AGING_TIMEOUT_64MIN,\
+                                                		ED_AGING_TIMEOUT_2MIN,\
+                                                        		ED_AGING_TIMEOUT_16384MIN,\
+                                                        		        WRITE_R | EESAVE_R | LIM_UNSIGN)\
     X_BUF(60,	Reg_Zigbee_FICR_Addr_0,			0,      0,		0,      READ_R)\
     X_BUF(61,	Reg_Zigbee_FICR_Addr_1,         0,      0,		0,      READ_R)\
     X_BUF(62,	Reg_Zigbee_FICR_Addr_2,         0,      0,		0,      READ_R)\
@@ -66,8 +76,7 @@
     X_BUF(97,	Reg_NTC_Step_Temperature,       1,		1,		5, 		WRITE_R | EESAVE_R | LIM_UNSIGN)\
     X_BUF(98,	Reg_NTC_Temper_Number_Step,     136,    0,      SIZE_NTC_TABLE,\
                                                                         WRITE_R | EESAVE_R | LIM_UNSIGN)\
-	X_BUF(99,	Reg_End,						301,	0,		0,		READ_R  | EESAVE_R)\
+	X_BUF(119,	Reg_End,						0,	    0,		0,		READ_R)\
 
-//------========MAIN_BUF_End_Table========------
 
 #endif /* MODBUS_X_H_INCLUDED */

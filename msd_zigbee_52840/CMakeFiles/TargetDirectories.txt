@@ -170,9 +170,6 @@ D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drive
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/counter/CMakeFiles/drivers__counter.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/counter/CMakeFiles/edit_cache.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/counter/CMakeFiles/rebuild_cache.dir
-D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/console/CMakeFiles/drivers__console.dir
-D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/console/CMakeFiles/edit_cache.dir
-D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/console/CMakeFiles/rebuild_cache.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/crypto/CMakeFiles/drivers__crypto.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/crypto/CMakeFiles/edit_cache.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/crypto/CMakeFiles/rebuild_cache.dir
@@ -184,6 +181,9 @@ D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drive
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/ieee802154/CMakeFiles/rebuild_cache.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/sensor/CMakeFiles/edit_cache.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/sensor/CMakeFiles/rebuild_cache.dir
+D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/watchdog/CMakeFiles/rebuild_cache.dir
+D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/watchdog/CMakeFiles/drivers__watchdog.dir
+D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/watchdog/CMakeFiles/edit_cache.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/hwinfo/CMakeFiles/drivers__hwinfo.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/hwinfo/CMakeFiles/edit_cache.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/zephyr/drivers/hwinfo/CMakeFiles/rebuild_cache.dir
@@ -208,9 +208,6 @@ D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/modules/nrf/
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/modules/nrf/lib/CMakeFiles/rebuild_cache.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/modules/nrf/lib/bin/CMakeFiles/edit_cache.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/modules/nrf/lib/bin/CMakeFiles/rebuild_cache.dir
-D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/modules/nrf/lib/dk_buttons_and_leds/CMakeFiles/..__nrf__lib__dk_buttons_and_leds.dir
-D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/modules/nrf/lib/dk_buttons_and_leds/CMakeFiles/edit_cache.dir
-D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/modules/nrf/lib/dk_buttons_and_leds/CMakeFiles/rebuild_cache.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/modules/nrf/lib/multithreading_lock/CMakeFiles/rebuild_cache.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/modules/nrf/lib/multithreading_lock/CMakeFiles/..__nrf__lib__multithreading_lock.dir
 D:/gg_project/MS_Workspace_10kV/Temperature_Sensor/msd_zigbee_52840/modules/nrf/lib/multithreading_lock/CMakeFiles/edit_cache.dir

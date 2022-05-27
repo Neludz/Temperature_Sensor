@@ -1,8 +1,3 @@
-
-//********************************** ADC ***********************************
-
-
-
 #include <drivers/adc.h>
 #include <device.h>
 #include <zephyr.h>
@@ -11,8 +6,12 @@
 #include "io_adc.h"
 #include "modbus_reg.h"
 #include "measure_ntc.h"
+
 LOG_MODULE_REGISTER(io_adc, LOG_LEVEL_INF);
-//**************************************************************************
+
+//-----------------------------------------------------------------------
+// variables
+//-----------------------------------------------------------------------
 extern uint16_t MBbuf_main[];
 const struct device *dev_adc;
 
@@ -22,14 +21,6 @@ const struct device *dev_adc;
 
 #define ADC_NUM_CHANNELS		DT_PROP_LEN(DT_ALIAS(msdz_adcs_t), msdz_adc_t_channels)
 #define ADC_NODE_T				DT_PHANDLE(DT_ALIAS(msdz_adcs_t), msdz_adc_t_id)
-
-
-/* Common settings supported by most ADCs */
-#define ADC_RESOLUTION			12
-#define ADC_GAIN				ADC_GAIN_1_4
-#define ADC_REFERENCE			ADC_REF_VDD_1_4
-#define ADC_ACQUISITION_TIME	ADC_ACQ_TIME_DEFAULT
-#define ADC_COUNTS  			(1<<ADC_RESOLUTION)
 
 /* Get the numbers of up to two channels */
 
@@ -55,7 +46,7 @@ struct adc_channel_cfg channel_cfg = {
 };
 
 struct adc_sequence_options sequence_options = {
-.extra_samplings = NUMBER_ADC_MEASUREMENTS-1,
+	.extra_samplings = NUMBER_ADC_MEASUREMENTS-1,
 };
 
 struct adc_sequence sequence = {
@@ -69,31 +60,39 @@ struct adc_sequence sequence = {
 };
 
 uint16_t ADC_Value_T[ADC_NUM_CHANNELS];
-//**************************************************************************
 
-   K_THREAD_DEFINE(io_adc_read_id, STACKSIZE, io_adc_task, NULL, NULL, NULL,
-		 K_PRIO_COOP(0) , 0,  10); 
+//-----------------------------------------------------------------------
+// task
+//-----------------------------------------------------------------------
 
-//**************************************************************************
+static struct k_thread io_adc_read_data;
+
+static k_tid_t io_adc_read_tid;
+
+K_THREAD_STACK_DEFINE(io_adc_read_stack_area, IO_STACKSIZE);
+
+//-----------------------------------------------------------------------
+// function
+//-----------------------------------------------------------------------
 void io_adc_init (void)
 {
-NTC_Calculation_Data_t NTC;
+	NTC_Calculation_Data_t NTC;
 
-NTC.NTC_r2=50000;//(MBbuf_main[Reg_NTC_R2_Value_W1]&0xFFFF)|((MBbuf_main[Reg_NTC_R2_Value_W2]&0xFFFF)<<16);
-NTC.NTC_r_divider=20000;//(MBbuf_main[Reg_NTC_R_Divider_W1]&0xFFFF)|((MBbuf_main[Reg_NTC_R_Divider_W2]&0xFFFF)<<16);
-NTC.NTC_adc_multipler=1;
-NTC.NTC_adc_resolution=ADC_COUNTS;
-NTC.NTC_b=3950;//(int16_t)MBbuf_main[Reg_NTC_B_Value];
-NTC.NTC_t2=25;//(int16_t)MBbuf_main[Reg_NTC_T2_Value];
-NTC.NTC_start_temperature=-10;//(int16_t)MBbuf_main[Reg_NTC_Start_Temperature];
-NTC.NTC_step_temperature=1;//(int16_t)MBbuf_main[Reg_NTC_Step_Temperature];
-NTC.NTC_temper_number_step=136;//MBbuf_main[Reg_NTC_Temper_Number_Step];
-calculate_table_NTC(NTC);
-
+	NTC.NTC_r2=(MBbuf_main[Reg_NTC_R2_Value_W1]&0xFFFF)|((MBbuf_main[Reg_NTC_R2_Value_W2]&0xFFFF)<<16);
+	NTC.NTC_r_divider=(MBbuf_main[Reg_NTC_R_Divider_W1]&0xFFFF)|((MBbuf_main[Reg_NTC_R_Divider_W2]&0xFFFF)<<16);
+	NTC.NTC_adc_multipler=1;
+	NTC.NTC_adc_resolution=ADC_COUNTS;
+	NTC.NTC_b=(int16_t)MBbuf_main[Reg_NTC_B_Value];
+	NTC.NTC_t2=(int16_t)MBbuf_main[Reg_NTC_T2_Value];
+	NTC.NTC_start_temperature=(int16_t)MBbuf_main[Reg_NTC_Start_Temperature];
+	NTC.NTC_step_temperature=(int16_t)MBbuf_main[Reg_NTC_Step_Temperature];
+	NTC.NTC_temper_number_step=MBbuf_main[Reg_NTC_Temper_Number_Step];
+	calculate_table_NTC(NTC);
 
 	dev_adc = DEVICE_DT_GET(ADC_NODE_T);
 
-	if (!device_is_ready(dev_adc)) {
+	if (!device_is_ready(dev_adc)) 
+	{
 		LOG_INF("ADC device not found\n");
 		return;
 	}
@@ -101,7 +100,8 @@ calculate_table_NTC(NTC);
 	/*
 	 * Configure channels individually prior to sampling
 	 */
-	for (uint8_t i = 0; i < ADC_NUM_CHANNELS; i++) {
+	for (uint8_t i = 0; i < ADC_NUM_CHANNELS; i++) 
+	{
 		channel_cfg.channel_id = channel_ids[i];
 #ifdef CONFIG_ADC_NRFX_SAADC
 		channel_cfg.input_positive = SAADC_CH_PSELP_PSELP_AnalogInput0
@@ -112,9 +112,15 @@ calculate_table_NTC(NTC);
 
 		sequence.channels |= BIT(channel_ids[i]);
 	}
-
+	io_adc_read_tid = k_thread_create(&io_adc_read_data,
+				    io_adc_read_stack_area,
+				    K_THREAD_STACK_SIZEOF(io_adc_read_stack_area),
+				    io_adc_task,
+				    NULL, NULL, NULL,
+				    IO_PRIORITY,
+				    0, K_MSEC(10));
 }
-//**************************************************************************
+
 /**
  * @brief io_getADCval - calculate median value for `nch` channel
  * @param nch - number of channel
@@ -140,47 +146,46 @@ int16_t io_getADCval(int16_t nch)
 #undef PIX_SWAP
 }
 
-//**************************************************************************
-void io_adc_task (void)
+//-----------------------------------------------------------------------
+// task
+//-----------------------------------------------------------------------
+void io_adc_task (void *arg1, void *arg2, void *arg3)
 {
-int16_t Adc_Filter_Value[ADC_NUM_CHANNELS];
-int16_t ADC_Val;	
-int err, i;
-io_adc_init();
+	int16_t Adc_Filter_Value[ADC_NUM_CHANNELS];
+	int16_t ADC_Val;	
+	int err, i;
 
-err = adc_read(dev_adc, &sequence);
+	err = adc_read(dev_adc, &sequence);
 	if (err != 0) 
 	{
-	LOG_INF("ADC reading failed with error %d.\n", err);
-	return;
+		LOG_INF("ADC reading failed with error %d.\n", err);
+		return;
 	}
     for(i = 0; i<ADC_NUM_CHANNELS;i++)
     {
-    ADC_Val=(int16_t)io_getADCval(i);
-    Adc_Filter_Value[i]=ADC_Val;
-	ADC_Value_T[i] = calc_temperature(Adc_Filter_Value[i]);
-	MBbuf_main[(channel_seq[i]+Reg_T_0_Channel)] = ADC_Value_T[i];
+    	ADC_Val=(int16_t)io_getADCval(i);
+    	Adc_Filter_Value[i]=ADC_Val;
+		ADC_Value_T[i] = calc_temperature(Adc_Filter_Value[i]);
+		MBbuf_main[(channel_seq[i]+Reg_T_0_Channel)] = ADC_Value_T[i];
 	}
 	k_sleep(K_MSEC(ADC_PAUSE_MS));
 
     while (1) 
     {	
-	err = adc_read(dev_adc, &sequence);
+		err = adc_read(dev_adc, &sequence);
 		if (err != 0) 
 		{
-		LOG_INF("ADC reading failed with error %d.\n", err);
-		return;
+			LOG_INF("ADC reading failed with error %d.\n", err);
+			return;
 		}
     	for(i = 0; i<ADC_NUM_CHANNELS;i++)
     	{
-    	ADC_Val=(int16_t)io_getADCval(i);
-		//LOG_INF("ADC reading %d: %d", (i+1), ADC_Val);
-    	Adc_Filter_Value[i]=(Adc_Filter_Value[i]*3+ADC_Val)>>2;
-		ADC_Value_T[i] = calc_temperature(Adc_Filter_Value[i]);
-    	MBbuf_main[(channel_seq[i]+Reg_T_0_Channel)] = ADC_Value_T[i];
+    		ADC_Val=(int16_t)io_getADCval(i);
+			//LOG_INF("ADC reading %d: %d", (i+1), ADC_Val);
+    		Adc_Filter_Value[i]=(Adc_Filter_Value[i]*3+ADC_Val)>>2;
+			ADC_Value_T[i] = calc_temperature(Adc_Filter_Value[i]);
+    		MBbuf_main[(channel_seq[i]+Reg_T_0_Channel)] = ADC_Value_T[i];
 		}
-	k_sleep(K_MSEC(ADC_PAUSE_MS));
+		k_sleep(K_MSEC(ADC_PAUSE_MS));
 	}
 }
-
-////*********************************** ADC END *******************************
