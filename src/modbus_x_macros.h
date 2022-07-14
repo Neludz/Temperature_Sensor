@@ -68,7 +68,7 @@
     X_BUF(87,	Reg_Zigbee_Code_7,              0x0F11, 0,		0xFFFF, WRITE_R | EESAVE_R)\
     X_BUF(90,	Reg_NTC_R2_Value_W1,            50000,	0,		0xFFFF, WRITE_R | EESAVE_R)\
     X_BUF(91,	Reg_NTC_R2_Value_W2,            0,		0,		0xFFFF, WRITE_R | EESAVE_R)\
-    X_BUF(92,	Reg_NTC_R_Divider_W1,           50000,	0,		0xFFFF, WRITE_R | EESAVE_R)\
+    X_BUF(92,	Reg_NTC_R_Divider_W1,           20000,	0,		0xFFFF, WRITE_R | EESAVE_R)\
     X_BUF(93,	Reg_NTC_R_Divider_W2,           0,		0,		0xFFFF, WRITE_R | EESAVE_R)\
     X_BUF(94,	Reg_NTC_B_Value,                3950,	0,		0xFFFF, WRITE_R | EESAVE_R)\
     X_BUF(95,	Reg_NTC_T2_Value,               25,		0,		0xFFFF, WRITE_R | EESAVE_R)\
