@@ -1,2 +1,10 @@
+Zigbee Temperature Sensor
+==========================
 
-To Do
+Overview
+--------
+Measure temperature with NTS resistor
+
+Configuration
+-------------
+Use modbus protocol. Test file on USB.
